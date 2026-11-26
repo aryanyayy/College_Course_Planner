@@ -1,41 +1,30 @@
-# College Course Planner — Simple Version
+# College Course Planner
 
-## Run
-Open this folder in VS Code and run:
+A simple, terminal-based Python application for managing student details, courses, assessments, a weekly timetable, and GPA records.
 
-    python main.py
+## Run the project
+1. Install Python 3.
+2. Keep all six Python files in the same folder.
+3. Open a terminal in that folder.
+4. Run: `python main.py`
 
-Only `main.py` needs to be run. It imports the other component files.
+The `data` folder and CSV files are created automatically on first run. Keep the data folder to retain saved information.
 
-## Python files
-- `main.py` — main menu and creates CSV files
+## Files
+- `main.py` — main menu and CSV setup
 - `profile.py` — student profile
-- `courses.py` — course list
-- `marks.py` — assessments and marks
-- `timetable.py` — L, P and O schedule entries; Monday to Sunday
-- `gpa.py` — SGPA, GPA history and CGPA
+- `courses.py` — course management and total registered credits
+- `marks.py` — assessment records, editing, deletion, course performance and upcoming assessments
+- `timetable.py` — weekly classes, personal/other events, upcoming schedule and today's timetable
+- `gpa.py` — SGPA, CGPA, GPA history and numeric mini calculator
 
-There are no separate helper or storage files.
+## Input formats
+- Course: `CSAE100 - Python Programming`
+- Date: `DD-MM-YYYY`
+- Time: `HH:MM` (24-hour clock)
+- Course code: letters followed by digits
+- Name: letters and spaces
+- Integer inputs use `int(input())`; decimal inputs use `float(input())`; ordinary text uses `input()`.
 
-## CSV location
-On the first run, `main.py` creates a folder named `data` beside the Python files. It creates these files inside it:
-- student.csv
-- courses.csv
-- assessments.csv
-- lectures.csv
-- events.csv
-- gpa.csv
-
-CSV records are saved when entered. Keep the `data` folder with the Python files.
-
-## L timetable format
-Select a day (Monday=1 through Sunday=7), then enter:
-
-    [08:20, 09:20] Digital Design Lecture
-    [10:30, 11:20] Calculus Tutorial
-    DONE
-
-P and O events are added with a date and time.
-
-## GPA
-The grade-point mapping is in `gpa.py`. Check the current official university scale before relying on the result.
+## Important
+The grade-point mapping is written in `gpa.py`. Confirm it against Bennett University's current official grading rules before treating the result as official.
